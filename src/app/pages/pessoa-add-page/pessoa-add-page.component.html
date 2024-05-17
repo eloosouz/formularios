@@ -1,0 +1,27 @@
+<form (ngSubmit)="salvar()">
+    <div>
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input matInput type="text" placeholder="Nome" name="nome" [(ngModel)]="pessoa.nome" required/>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="text" placeholder="Email" name="email" [(ngModel)]="pessoa.email" />
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>Hobbie</mat-label>
+            <mat-select name="hobie" [(ngModel)]="pessoa.hobie">
+                <mat-option *ngFor="let hobie of hobies"[value]="hobie">{{hobie}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <button type="submit" mat-buttom color="primary"> Salvar</button>
+    </div>
+
+</form>
+
