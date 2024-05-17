@@ -11,7 +11,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { HeaderComponent } from './components/header/header.component';
 import { PessoaPageComponent } from './pages/pessoa-page/pessoa-page.component';
 import { PessoaAddPageComponent } from './pages/pessoa-add-page/pessoa-add-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
