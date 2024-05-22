@@ -12,10 +12,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { PessoaPageComponent } from './pages/pessoa-page/pessoa-page.component';
 import { PessoaAddPageComponent } from './pages/pessoa-add-page/pessoa-add-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatDatepickerModule } from '@angular/material/datepicker'; 
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { NgxMaskDirective, NgxMaskPipe, provideNgxMask} from 'ngx-mask';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     PessoaPageComponent,
     PessoaAddPageComponent,
-  
+
   ],
   imports: [
     BrowserModule,
@@ -38,11 +37,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgxMaskDirective, NgxMaskPipe,
     HttpClientModule
   ],
   providers: [
-    provideNgxMask()
   ],
   bootstrap: [AppComponent]
 })

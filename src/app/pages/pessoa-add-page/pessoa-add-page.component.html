@@ -16,7 +16,7 @@
                 <p class="error" *ngIf="isError('email', 'required')"> Email é obrigatório! </p>
 
                 <p class="error" *ngIf="isError('email', 'email')"> Não é um Email válido. </p>
-            
+
 
             </div>
         </mat-form-field>
@@ -28,7 +28,7 @@
             <mat-datepicker #startAt></mat-datepicker>
 
         </mat-form-field>
-    
+
     <mat-form-field appearance="fill">
         <mat-label>End Date</mat-label>
         <input matInput [matDatepicker]="endAt" formControlName="'endAt">
@@ -44,10 +44,10 @@
     <div>
         <mat-form-field appearance="fill">
             <mat-label>CPF</mat-label>
-            <input matInput type="text" placeholder="CPF" name="cpf" fomrControlName="cpf" mask="000.000.000-00" />
+            <input matInput type="text" placeholder="CPF" name="cpf" fomrControlName="cpf" />
             <div>
-                <p class="error" *ngIf="isError('cpf', 'validateCpf')"> 
-                    Não é um cpf 
+                <p class="error" *ngIf="isError('cpf', 'validateCpf')">
+                    Não é um cpf
                 </p>
 
                 <p class="error" *ngIf="isError('cpf', 'required')">
@@ -58,13 +58,13 @@
 
         <mat-form-field appearance="fill">
             <mat-label>CNPJ</mat-label>
-            <input matInput type="text" fomrControlName="cnpj" mask="00.000.000/0000-00"/>
+            <input matInput type="text" fomrControlName="cnpj"/>
             <div>
-            
+
                 <p class="error" *ngIf="isError('cnpj', 'required')">
                 Cnpj é Obrigatório </p>
 
-                <p class="error" *ngIf="isError('cnpj', 'cnpjValidator')"> Não é um cnpj  valido 
+                <p class="error" *ngIf="isError('cnpj', 'cnpjValidator')"> Não é um cnpj  valido
                 </p>
             </div>
 
@@ -73,7 +73,7 @@
 
     </div>
 </div>
-    
+
 
     <div>
         <mat-form-field appearance="fill">
