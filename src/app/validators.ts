@@ -1,5 +1,5 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms";
-import { validate_cpf, validate_cnpj } from "js-brasil/dist/src/validate";
+import { validate_cpf, validate_cnpj } from "js-brasil/src/validate";
 
 export function createPasswordStrengthValidator(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
@@ -16,13 +16,13 @@ export function createPasswordStrengthValidator(): ValidatorFn {
 
         const passwordValid = hasUpperCase && hasLowerCase && hasNumeric;
 
-        return !passwordValid ? (passwordStrength:true): null;
+        return !passwordValid ? {passwordStrength:true}: null;
     }
 }
 
 export function createDateRangeValidator(): ValidatorFn {
     return (form: AbstractControl): ValidationErrors | null => {
-        
+
         const start:Date = form.get("startAt")?.value;
 
         const end:Date = form.get("endAt")?.value;
@@ -34,7 +34,7 @@ export function createDateRangeValidator(): ValidatorFn {
 
         }
         return null;
-    } 
+    }
 
 }
 
@@ -47,7 +47,7 @@ export function createCPFValidator() : ValidatorFn {
         }
 
         const isCpf = validate_cpf(value);
-        return isCpf ? null : (cpfValidator: true)
+        return isCpf ? null : {cpfValidator: true}
 
     }
 }

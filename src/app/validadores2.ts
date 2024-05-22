@@ -1,6 +1,6 @@
 
 import{ AbstractControl, ValidatorFn} from "@angular/forms";
-import { validate_cpf } from "js-brasil/dist/src/validate";
+import { validate_cpf } from "js-brasil/src/validate";
 
  
 export function validateCpf(): ValidatorFn {
