@@ -3,7 +3,11 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Pessoa } from 'src/app/model/pessoa.model';
 import { PessoaService } from 'src/app/services/pessoa.service';
-import { validateCpf } from 'src/app/validadores2';
+import { createPasswordStrengthValidator, createDateRangeValidator, createCPFValidator, createCNPJValidator
+ } from 'src/app/validators';
+
+
+// import { validateCpf } from 'src/app/validadores2';
 
 @Component({
   selector: 'app-pessoa-add-page',
@@ -29,10 +33,10 @@ export class PessoaAddPageComponent implements OnInit {
       password: [''],
       startAt: [],
       endAt: [],
-      cpf: ['', validateCpf()],
-      cnpj: ['']
+      cpf: ['', Validators.compose([Validators.required, createCPFValidator()]) ],
+      cnpj: ['', Validators.compose([Validators.required, createCNPJValidator()]) ]
     }, {
-      validators: []
+      validators: [ createDateRangeValidator]
     });
   }
 
