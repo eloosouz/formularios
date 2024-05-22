@@ -52,7 +52,8 @@ export class PessoaAddPageComponent implements OnInit {
       if (this.formGroup.value.id) {
         this.service.editar(this.formToValue(this.formGroup));
       } else {
-        this.service.salvar(this.formToValue(this.formGroup)).subscribe(p => {
+        this.service.salvar(this.formToValue(this.formGroup))
+        .subscribe(p => {
           alert('pessoa salva com sucesso');
         });
       }
